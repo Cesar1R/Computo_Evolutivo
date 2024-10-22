@@ -1,0 +1,19 @@
+-------Comienza el proceso de asignacion de Tareas--------
+----Comienza generacion de tareas---
+--Asignaciones iniciales--
+--Asignaciones hasta recibir la cantidad de puntos deseada--
+----Comienza el proceso de generacion de resultados------
+Path: /home/est_licenciatura_cesar.rivera/Evolutivo/Segunda_Parte/Pruebas/im_v3i1024.pgm
+--------Se inicia el termino de los proceso slaves---------
+Proceso 1 termino <----------
+Proceso 2 termino <----------
+Proceso 3 termino <----------
+Proceso 4 termino <----------
+Proceso 5 termino <----------
+Proceso 6 termino <----------
+Proceso 7 termino <----------
+Proceso 8 termino <----------
+Proceso 9 termino <----------
+Proceso 10 termino <----------
+Proceso 11 termino <----------
+Tiempo de ejecucion 0:3:30
