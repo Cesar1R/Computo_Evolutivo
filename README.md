@@ -12,3 +12,6 @@ Diferentes metodos de obtencion de soluciones no dominadas siguiendo la definici
 
 ## Tarea 3:
 Implementacion del algoritmo NSGA-II para minimizacion y maximizacion, con versatilidad de ser utilizado con diferentes funciones, en dos dimensiones, incluyendo restricciones en el espacio de las variables. 
+
+## Tarea 4 - > Incluido en Tarea3: 
+Prueba del NSGA-II con funciones WFG utilizando el hipervolumen
