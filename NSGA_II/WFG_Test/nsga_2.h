@@ -10,50 +10,17 @@
 #include <fstream>
 #include <limits>
 #include <functional>
+#include "estructuras.h" 
 
 using namespace std;
+using estructuras::Individuo; 
+using estructuras::Funcion; 
 
 #define MAX_DOUBLE  std::numeric_limits<double>::max()
 #define MIN_DOUBLE  std::numeric_limits<double>::lowest()
 #define INFINITY_DOUBLE std::numeric_limits<double>::infinity()
 
 namespace funciones_opti{
-
-    // Estructura para representar un Individuo
-    typedef struct Individuo_struct {
-        vector< double >  var;  // Variables 
-        vector< double >  evals; // Evaluaciones 
-
-        int n;  // Cantidad de variables
-        int frente_dominancia; 
-        int id_original;    
-        double distancia_c; 
-
-        // Constructores
-        Individuo_struct(const vector<double>& vec);
-        Individuo_struct();
-        Individuo_struct(const vector<double>& vars, const vector<double>& eval_vec);
-        Individuo_struct(const int n_); 
-    } Individuo; 
-
-    // Estructura para la función objetivo
-    typedef struct Fun_struct {
-        vector<double> lower_bounds; 
-        vector<double> upper_bounds; 
-        int M; //Cantidad objetivos 
-        int k; 
-        std::function<std::vector<double>(const std::vector<double>&, int, int)> func; 
-
-
-
-        Fun_struct(
-            const int M_, 
-            const int k_, 
-            std::function<std::vector<double>(const std::vector<double>&, int, int)> fun_parametro
-            ); 
-
-        vector<double> f(const vector<double>  z);
-    } Funcion;
 
     // Declaración de funciones
     int random_id(int n); 
@@ -70,7 +37,6 @@ namespace funciones_opti{
         double probabilidad_cruce, 
         bool min, 
         int cant_var);
-    double ran_db (double lower_bound, double upper_bound); 
 
 }
 #endif  // NSGA_II

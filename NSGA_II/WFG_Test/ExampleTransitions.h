@@ -1,5 +1,5 @@
 /*
- * Copyright © 2005 The Walking Fish Group (WFG).
+ * Copyright ï¿½ 2005 The Walking Fish Group (WFG).
  *
  * This material is provided "as is", with no warranty expressed or implied.
  * Any use is at your own risk. Permission to use or copy this software for
