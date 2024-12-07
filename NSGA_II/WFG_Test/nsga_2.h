@@ -36,7 +36,9 @@ namespace funciones_opti{
         double probabilidad_mutacion, 
         double probabilidad_cruce, 
         bool min, 
-        int cant_var);
+        int cant_var, 
+        vector<Individuo> &pob_init
+        );
 
 }
 #endif  // NSGA_II

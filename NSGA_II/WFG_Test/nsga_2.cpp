@@ -164,7 +164,8 @@ namespace funciones_opti{
         double probabilidad_mutacion, 
         double probabilidad_cruce, 
         bool min, 
-        int cant_var 
+        int cant_var, 
+        vector<Individuo> &pob_init
     )
     {   
         set<int> nums = {10, 20, 50, 80, 100}; 
@@ -172,13 +173,14 @@ namespace funciones_opti{
         vector<Individuo> poblacion_inicial; 
                             poblacion_inicial.reserve(n);
         try{
-
             //Inicializacion de la poblacion inicial
             for(int i = 0; i < n; i++){
                 poblacion_inicial.push_back(Individuo(cant_var));  
 
                 poblacion_inicial[i].evals = funcion_objetivo.f(poblacion_inicial[i].var); 
             }
+
+            pob_init = poblacion_inicial;
 
             calcular_FrentesyDistancias(poblacion_inicial, min); 
 

@@ -51,6 +51,8 @@ int main(){
 
     vector<double> referencia = {2.2, 4.4}; 
 
+    vector<Individuo> poblacion_inicial; 
+
     vector< Individuo >  frente_WFG3 = funciones_opti::NSGAII(
                 Funcion (M, k, WFG3), 
                 pob_size, 
@@ -58,10 +60,11 @@ int main(){
                 probabilidad_mutacion, 
                 probabilidad_cruce, 
                 min,
-                cant_var);
-                
-    print_frente(path + "WFG1.txt", frente_WFG3); 
-    std::cout << "HV WFG1: " << calcularHipervolumen(frente_WFG3, referencia);
+                cant_var, 
+                poblacion_inicial);
+    print_frente(path + "WFG3_pobIn.txt", poblacion_inicial); 
+    print_frente(path + "WFG3.txt", frente_WFG3); 
+    std::cout << "HV WFG3: " << calcularHipervolumen(frente_WFG3, referencia) << " "; 
 
     vector< Individuo >  frente_WFG2 = funciones_opti::NSGAII(
                 Funcion (M, k, WFG2), 
@@ -70,9 +73,12 @@ int main(){
                 probabilidad_mutacion, 
                 probabilidad_cruce, 
                 min,
-                cant_var);    
+                cant_var, 
+                poblacion_inicial);
+
+    print_frente(path + "WFG2_pobIn.txt", poblacion_inicial);    
     print_frente(path + "WFG2.txt", frente_WFG2); 
-    std::cout << "HV WFG2: " <<  calcularHipervolumen(frente_WFG2, referencia);
+    std::cout << "HV WFG2: " <<  calcularHipervolumen(frente_WFG2, referencia) << " ";
 
 
 
@@ -83,12 +89,15 @@ int main(){
                 probabilidad_mutacion, 
                 probabilidad_cruce, 
                 min,
-                cant_var); 
-
+                cant_var, 
+                poblacion_inicial); 
+    print_frente(path + "WFG7_pobIn.txt", poblacion_inicial); 
     print_frente(path + "WFG7.txt", frente_WFG7);
      
-    std::cout << "HV WFG7: " << calcularHipervolumen(frente_WFG7, referencia);
+    std::cout << "HV WFG7: " << calcularHipervolumen(frente_WFG7, referencia) << " ";
 
+
+    
 
 
 
